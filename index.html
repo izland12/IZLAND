@@ -2,6 +2,14 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css" type="text/css">
+		<script>
+			function Chat(ele) {
+	    		if(event.key === 'Enter') {
+				location = "test:"+ele.value;
+        		ele.value='';
+        		}
+    		}
+		</script>
 	</head>
 	<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
 		<div class="item-wrap">
@@ -13,11 +21,9 @@
 
 				<div class="chat" style="float:left;">
 	    			<div class="inner">
-	    				<span>IZ*LAND</span>
-	    				<br>
-	    				안녕
-	    				<br>
-	    				<input type="text" id="chatbox" size=50 maxlength=30>
+	    				IZ*LAND
+	    				<div id='chat'></div>
+	    				<input type="text" placeholder="제목을 입력해주세요" onkeydown="Chat(this)" class="chatbox" id="chat" maxlength=30>
 	    			</div>
 				</div>
 			</div>
